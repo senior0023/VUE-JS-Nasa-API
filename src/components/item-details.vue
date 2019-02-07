@@ -6,7 +6,7 @@
     <div>
       <div class="title"><h1>{{nasa_details.data[0].title}}</h1>
       </div>
-      <el-collapse >
+      <el-collapse>
         <el-collapse-item title="Keywords" name="Keywords">
           <div class="keywords-items" v-for="(item, index) in nasa_details.data[0].keywords">
             -<strong><i>{{item}}</i></strong>
@@ -31,7 +31,6 @@
           <div>{{nasa_details.data[0].description}}</div>
         </el-collapse-item>
       </el-collapse>
-
       <div class="block carouseli" v-if="images.length>0">
         <el-carousel indicator-position="none" autoplay=false trigger='click' height="350px" style="text-align:center">
           <el-carousel-item v-for="item in images" :key="item">
@@ -58,13 +57,9 @@ export default {
     }
   },
   mounted() {
-    console.log('details item: ', this.nasa_details);
-    console.log('params', this.$route.params)
 
     this.axios.get(this.nasa_details.data.href).then((response) => {
-
       this.href_info = response.data
-      console.log('response on details',response.data);
       this.href_info.map((value, key) => {
         if (value.split('.')[value.split('.').length - 1] === 'png' || value.split('.')[value.split('.').length - 1] === 'jpg') {
           this.images.push(value);
@@ -92,14 +87,15 @@ export default {
   margin: 20px auto;
 }
 
-.href{
+.href {
   margin: 20px 0;
 }
 
-.table_odd_color{
+.table_odd_color {
   background-color: #f5f5f5;
 }
-.href-items{
+
+.href-items {
   padding: 5px 0;
 }
 

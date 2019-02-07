@@ -97,7 +97,6 @@ export default {
         response.data.collection.items.map(value => {
           this.info.push(value)
         })
-        console.log('info', this.info)
 
       }).catch(error => {
         console.log(error)
@@ -119,8 +118,6 @@ export default {
         })
 
         this.$store.state.nasa_details = response.data.collection.items
-
-        console.log('info', this.info)
 
       }).catch(error => {
         console.log(error)
