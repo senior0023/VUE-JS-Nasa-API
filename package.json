@@ -2,7 +2,7 @@
   "name": "nasa_api",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "Blerton Rexha <blerton.rexha@hotelkeyapp.com>",
+  "author": "Blerton Rexha",
   "license": "MIT",
   "private": true,
   "scripts": {
